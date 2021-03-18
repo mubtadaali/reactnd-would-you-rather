@@ -6,7 +6,8 @@ import QuestionOption from "../components/QuestionOption";
 import { handleAnswerSubmission } from "../actions/questions";
 
 const QuestionDetail = (props) => {
-	const { author, myAnswer,  totalVotes, optionOne, optionOneVotes, optionTwo, optionTwoVotes, dateTimeText }= props;
+	const { author, myAnswer,  totalVotes, optionOne, optionOneVotes,
+		avatar, optionTwo, optionTwoVotes, dateTimeText }= props;
 	const handleOptionSelection = (answer) => {
 		if (myAnswer === '') {
 			props.saveQuestionAnswer(answer)
@@ -17,6 +18,7 @@ const QuestionDetail = (props) => {
 		<div className="question-detail">
 			<div className="card">
 				<div className="card-header">
+					<img src={avatar} alt={author} height={70} width={70} />
 					<h3> {author} Asked: </h3>
 				</div>
 				<div className="card-body">
@@ -50,7 +52,8 @@ const QuestionDetail = (props) => {
 
 function mapStateToProps({questions, users, authedUserId}, { match }){
 	const qId = match.params.id;
-	const question = getQuestionDetails(questions[qId], users, authedUserId)
+	let question = questions[qId];
+	question = getQuestionDetails(question, users, authedUserId)
 	const totalVotes = question.optionOneVotes + question.optionTwoVotes;
 
 	return { ...question, totalVotes, qId }

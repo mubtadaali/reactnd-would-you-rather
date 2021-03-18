@@ -14,6 +14,8 @@ export function getQuestionDetails(question, users, userId) {
 	let questionMap = getListingQuestionMapping(question, users);
 	questionMap.myAnswer = question.optionOne.votes.includes(userId)? 'optionOne':
 		question.optionTwo.votes.includes(userId)? 'optionTwo': '';
+
+	questionMap.avatar = users[question.author].avatarURL;
 	questionMap.optionOneVotes = question.optionOne.votes.length;
 	questionMap.optionTwoVotes = question.optionTwo.votes.length;
 

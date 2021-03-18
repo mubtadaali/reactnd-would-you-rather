@@ -9,9 +9,13 @@ const LeaderBoard = ({ users }) => {
       <h2> Leader Board </h2>
       {
         users.map( user => {
-          const { id, name, answers, questions } = user;
+          const { id, name, avatarURL, answers, questions } = user;
           return(
-            <UserCard key={id} name={name} answeredCount={Object.keys(answers).length} askedCount={questions.length} />
+            <UserCard key={id}
+                      name={name}
+                      avatarURL={avatarURL}
+                      askedCount={questions.length}
+                      answeredCount={Object.keys(answers).length} />
             );
         })
       }

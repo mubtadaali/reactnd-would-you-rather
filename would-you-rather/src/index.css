@@ -34,18 +34,28 @@ code {
 
 .question-switch {
   margin: 20px 20px 30px 20px;
-  /*float: right;*/
 }
 
 .question-wrapper {
   margin: 30px 30px 30px 30px;
-  padding: 20px 100px 20px 100px;
+  padding: 20px 200px 20px 200px;
   text-align: center;
 }
 
 .question {
-  cursor: pointer;
   margin: 20px 0 20px 0;
+}
+
+.avatar-wrapper {
+  padding: 40px;
+}
+
+.card-body {
+  padding-top: 50px;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .question-detail {
@@ -74,4 +84,8 @@ code {
 
 .alert{
   border: 1px ridge green
+}
+
+.form-group {
+  padding: 10px;
 }
