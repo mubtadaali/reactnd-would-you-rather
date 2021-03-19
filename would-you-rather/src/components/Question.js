@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 const Question = ({ id, author, optionOne, optionTwo, dateTimeText, isAnswered }) => {
 	const history = useHistory();
 	return(
-		<div className="card question pointer" onClick={() => {history.push(`questions/${id}`)}}>
+		<div className="card question pointer" onClick={() => {history.push(`questiondsds/${id}`)}}>
 			<div className="card-header" style={{ textAlign: 'left' }}>
 				<strong>{author}</strong> Asked
 				{ isAnswered && <span className="badge success" style={{ float: 'right' }}>ANSWERED</span> }
