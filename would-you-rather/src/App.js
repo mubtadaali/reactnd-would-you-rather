@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import React, {useEffect, Fragment} from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
@@ -34,6 +34,7 @@ const App = (props) => {
 							</Switch>:
 							<Switch>
 								<Route path='/' exact component={Login} />
+								<Redirect to='/' />
 								<Route path="*" component={NotFound} />
 							</Switch>
 					}
