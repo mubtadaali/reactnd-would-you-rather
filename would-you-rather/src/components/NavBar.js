@@ -14,10 +14,10 @@ const NavBar = ({user, logout}) => {
                         <NavLink to="/" className="nav-link">Home</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/new-question" className="nav-link">New Question</NavLink>
+                        <NavLink to="/add" className="nav-link">New Question</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/leader-board" className="nav-link">Leader Board</NavLink>
+                        <NavLink to="/leaderboard" className="nav-link">Leader Board</NavLink>
                     </li>
                 </ul>
             </div>

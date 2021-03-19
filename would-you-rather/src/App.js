@@ -26,8 +26,8 @@ const App = (props) => {
 								<Fragment>
 									<NavBar user={props.loggedInUser} />
 									<Route path='/' exact component={DashBoard}/>
-									<Route path='/new-question' component={NewQuestion}/>
-									<Route path='/leader-board' exact component={LeaderBoard}/>
+									<Route path='/add' component={NewQuestion}/>
+									<Route path='/leaderboard' exact component={LeaderBoard}/>
 									<Route path="/questions/:id" component={QuestionDetail} />
 									<Route path="*" component={NotFound}/>
 								</Fragment>
