@@ -29,8 +29,8 @@ const App = (props) => {
 									<Route path='/add' component={NewQuestion}/>
 									<Route path='/leaderboard' exact component={LeaderBoard}/>
 									<Route path="/questions/:id" component={QuestionDetail} />
-									<Route path="*" component={NotFound}/>
 								</Fragment>
+								<Route path="*" component={NotFound}/>
 							</Switch>:
 							<Switch>
 								<Route path='/' exact component={Login} />
